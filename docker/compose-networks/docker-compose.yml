@@ -10,3 +10,11 @@ services:
       - 5001:80
     depends_on:
       - db
+  prices:
+    build: ./prices
+    volumes:
+      - ./prices:/app
+    ports:
+      - 5002:80
+    depends_on:
+      - apparel
